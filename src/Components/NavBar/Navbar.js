@@ -23,7 +23,7 @@ const Navbar = () => {
             <Link to="/PetCards">Pets</Link>
           </li>
           <li>
-            <Link to="/">Donation</Link>
+            <Link to="/Shelters">Shelters</Link>
           </li>
           <li>
             <Link to="/Contact">Contact Us</Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
       </div>
       <div>
         <Link to="/">
-          <button className="Navbar-button">Login or signup</button>
+          <button className="Navbar-button">Login/SignUp</button>
         </Link>
       </div>
     </div>
