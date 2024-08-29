@@ -4,6 +4,8 @@ import Navbar from "./Components/NavBar/Navbar";
 import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import "./App.css";
+import Events from "./Components/Events/Events";
+import Contact from "./Components/Contact/Contact";
 
 const Layout = ({ children }) => (
   <>
@@ -22,6 +24,22 @@ const App = () => {
           element={
             <Layout>
               <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/Events"
+          element={
+            <Layout>
+              <Events />
+            </Layout>
+          }
+        />
+        <Route
+          path="/Contact"
+          element={
+            <Layout>
+              <Contact />
             </Layout>
           }
         />

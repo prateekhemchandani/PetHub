@@ -28,14 +28,14 @@ const Footer = () => {
             <i className="fa fa-linkedin-square"></i> Linkedin
           </a>
           &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a
+          {/* <a
             className="contact-links"
             href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
             <i className="fa fa-github"></i> GitHub
-          </a>
+          </a> */}
           |
           <a
             className="contact-links"
