@@ -17,7 +17,7 @@ const HomeLandingContainer = (props) => {
             </div>
             Buy Love,But You
             <br />
-            Can Rescue it❤️
+            Can Rescue it ❤️
           </p>
           <p className="home-second-para">
             Every dog deserves a home, and every home deserves a dog.

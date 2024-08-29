@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Pawsitive Haven Shelter",
+    "location": "Mumbai, Maharashtra",
+    "description": "Providing a safe and nurturing environment for abandoned pets in Mumbai.",
+    "latitude": 19.0760,
+    "longitude": 72.8777,
+    "pets": [
+      { "id": 1, "name": "Buddy", "type": "Dog", "age": 2 },
+      { "id": 2, "name": "Mittens", "type": "Cat", "age": 3 }
+    ],
+    "volunteerOpportunities": "Join us in caring for pets and organizing adoption events.",
+    "services": "Adoption, Veterinary Care, Community Outreach"
+  },
+  {
+    "id": 2,
+    "name": "Stray Animal Foundation of India",
+    "location": "Navi Mumbai, Maharashtra",
+    "description": "Dedicated to the rescue and rehabilitation of stray animals in Navi Mumbai.",
+    "latitude": 19.0330,
+    "longitude": 73.0297,
+    "pets": [
+      { "id": 3, "name": "Max", "type": "Dog", "age": 4 },
+      { "id": 4, "name": "Luna", "type": "Cat", "age": 1 }
+    ],
+    "volunteerOpportunities": "Help with animal care, training, and community programs.",
+    "services": "Adoption, Spay & Neuter, Veterinary Services"
+  },
+  {
+    "id": 3,
+    "name": "Animal Welfare Trust",
+    "location": "Thane, Maharashtra",
+    "description": "Rescue, rehabilitate, and rehome pets in Thane and surrounding areas.",
+    "latitude": 19.2183,
+    "longitude": 72.9781,
+    "pets": [
+      { "id": 5, "name": "Charlie", "type": "Dog", "age": 5 },
+      { "id": 6, "name": "Whiskers", "type": "Cat", "age": 2 }
+    ],
+    "volunteerOpportunities": "Participate in shelter operations and outreach programs.",
+    "services": "Adoption, Animal Rescue, Community Awareness"
+  },
+  {
+    "id": 4,
+    "name": "Pet Haven India",
+    "location": "Vasai, Maharashtra",
+    "description": "A dedicated shelter for abandoned pets offering medical care and rehoming services.",
+    "latitude": 19.3919,
+    "longitude": 72.8397,
+    "pets": [
+      { "id": 7, "name": "Bella", "type": "Dog", "age": 3 },
+      { "id": 8, "name": "Snowy", "type": "Cat", "age": 4 }
+    ],
+    "volunteerOpportunities": "Assist with pet care and foster programs.",
+    "services": "Adoption, Foster Care, Pet Training"
+  },
+  {
+    "id": 5,
+    "name": "Animal Angels Shelter",
+    "location": "Kalyan, Maharashtra",
+    "description": "Providing a safe haven for stray and abandoned animals in Kalyan.",
+    "latitude": 19.2437,
+    "longitude": 73.1355,
+    "pets": [
+      { "id": 9, "name": "Oscar", "type": "Dog", "age": 6 },
+      { "id": 10, "name": "Milo", "type": "Cat", "age": 2 }
+    ],
+    "volunteerOpportunities": "Help with adoption events and animal rescue missions.",
+    "services": "Adoption, Animal Rescue, Veterinary Services"
+  },
+  {
+    "id": 6,
+    "name": "Happy Paws Sanctuary",
+    "location": "Panvel, Maharashtra",
+    "description": "Dedicated to rescuing and rehabilitating injured and abandoned pets.",
+    "latitude": 18.9894,
+    "longitude": 73.1175,
+    "pets": [
+      { "id": 11, "name": "Rocky", "type": "Dog", "age": 7 },
+      { "id": 12, "name": "Chloe", "type": "Cat", "age": 1 }
+    ],
+    "volunteerOpportunities": "Join us for animal care and community awareness programs.",
+    "services": "Adoption, Medical Care, Community Outreach"
+  }
+]
