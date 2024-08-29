@@ -1205,9 +1205,9 @@ body {
 }
 
 .contact-links:hover {
-  background-color: var(--orange);
-  color: var(--white);
-  text-shadow: 2px 2px 2px var(--orange);
+  color: var(--orange);
+  /* color: var(--white); */
+  /* text-shadow: 2px 2px 2px var(--orange); */
   text-decoration: none;
   border-radius: 20px;
 }

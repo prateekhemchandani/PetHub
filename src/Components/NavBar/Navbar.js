@@ -20,7 +20,7 @@ const Navbar = () => {
             <Link to="/Events">Events</Link>
           </li>
           <li>
-            <Link to="/">Pets</Link>
+            <Link to="/PetCards">Pets</Link>
           </li>
           <li>
             <Link to="/">Donation</Link>

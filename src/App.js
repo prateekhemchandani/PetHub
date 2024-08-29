@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import "./App.css";
 import Events from "./Components/Events/Events";
 import Contact from "./Components/Contact/Contact";
+import PetCards from "./Components/PetCards/PetCards";
 
 const Layout = ({ children }) => (
   <>
@@ -32,6 +33,14 @@ const App = () => {
           element={
             <Layout>
               <Events />
+            </Layout>
+          }
+        />
+        <Route
+          path="/PetCards"
+          element={
+            <Layout>
+              <PetCards />
             </Layout>
           }
         />
