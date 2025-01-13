@@ -7,7 +7,7 @@ import "./App.css";
 import Events from "./Components/Events/Events";
 import Contact from "./Components/Contact/Contact";
 import PetCards from "./Components/PetCards/PetCards";
-import ShelterPage from "./Components/Shelters/ShelterPage"
+import ShelterPage from "./Components/Shelters/ShelterPage";
 
 const Layout = ({ children }) => (
   <>
