@@ -12,7 +12,7 @@ const petSchema = new Schema(
     age: {
       type: Number,
     },
-    petAvatar: {
+    avatar: {
       type: String,
       required: true,
     },

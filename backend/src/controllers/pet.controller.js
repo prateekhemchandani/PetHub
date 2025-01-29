@@ -11,7 +11,7 @@ const registerPet = asyncHandler(async (req, res) => {
     throw new ApiError(400, "All fields are required");
   }
 
-  console.log(animal);
+  // console.log(req.files);
   const avatarLocalPath = req.files?.avatar[0]?.path;
 
   if (!avatarLocalPath) {
