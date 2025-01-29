@@ -20,8 +20,10 @@ app.use(cookieParser());
 
 import userRoute from "./routes/user.routes.js";
 import adminRouter from "./routes/admin.routes.js";
+import { petRouter } from "./routes/pet.routes.js";
 
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/admin", adminRouter);
+app.use("/api/v1/pet", petRouter);
 
 export { app };
