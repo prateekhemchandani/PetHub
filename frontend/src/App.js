@@ -10,6 +10,7 @@ import PetCards from "./Components/PetCards/PetCards";
 import ShelterPage from "./Components/Shelters/ShelterPage";
 import LoginPage from "./Components/login/login";
 import RegisterPage from "./Components/Register/register";
+import PetManager from "./Components/Admin/admin";
 
 const Layout = ({ children }) => (
   <>
@@ -36,6 +37,14 @@ const App = () => {
           element={
             <Layout>
               <Events />
+            </Layout>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <Layout>
+              <PetManager />
             </Layout>
           }
         />
