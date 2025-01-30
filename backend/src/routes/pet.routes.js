@@ -1,6 +1,6 @@
 import Router from "express";
 import { registerPet, removePet } from "../controllers/pet.controller.js";
-import { registerPet } from "../controllers/pet.controller.js";
+// import { registerPet } from "../controllers/pet.controller.js";
 import { upload } from "../middlewares/multer.middleware.js";
 const petRouter = Router();
 
