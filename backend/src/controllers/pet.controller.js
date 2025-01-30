@@ -24,7 +24,7 @@ const registerPet = asyncHandler(async (req, res) => {
     throw new ApiError(400, "Avatar file is required");
   }
 
-  const pet = Pet.create({
+  const pet = await Pet.create({
     animal,
     petName,
     avatar: avatar.url,
@@ -40,4 +40,20 @@ const registerPet = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, pet, "Pet registered successfully"));
 });
 
+
+const removePet = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+
+  const pet = await Pet.findByIdAndDelete(id);
+
+  if (!pet) {
+    throw new ApiError(404, "Pet not found");
+  }
+
+  return res
+    .status(200)
+    .json(new ApiResponse(200, null, "Pet removed successfully"));
+});
+
+export { removePet };
 export { registerPet };
