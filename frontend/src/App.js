@@ -8,6 +8,8 @@ import Events from "./Components/Events/Events";
 import Contact from "./Components/Contact/Contact";
 import PetCards from "./Components/PetCards/PetCards";
 import ShelterPage from "./Components/Shelters/ShelterPage";
+import LoginPage from "./Components/login/login";
+import RegisterPage from "./Components/Register/register";
 
 const Layout = ({ children }) => (
   <>
@@ -42,6 +44,22 @@ const App = () => {
           element={
             <Layout>
               <PetCards />
+            </Layout>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <Layout>
+              <LoginPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <Layout>
+              <RegisterPage />
             </Layout>
           }
         />

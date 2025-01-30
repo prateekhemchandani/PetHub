@@ -1,13 +1,18 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-
 const app = express();
 
+// app.use(
+//   cors({
+//     origin: process.env.CORS_ORIGIN,
+//     credentials: true,
+//   })
+// );
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN,
-    credentials: true,
+    origin: "http://localhost:3000",
+    credentials: true, // Allows cookies
   })
 );
 
@@ -25,5 +30,4 @@ import { petRouter } from "./routes/pet.routes.js";
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/admin", adminRouter);
 app.use("/api/v1/pet", petRouter);
-
 export { app };
