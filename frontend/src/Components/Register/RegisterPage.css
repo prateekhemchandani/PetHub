@@ -1,0 +1,59 @@
+/* RegisterPage.css */
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58vh;
+    background-color: #ffffff;
+  }
+  
+  .register-box {
+    background-color: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 384px; 
+  }
+  
+  .register-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #00000000;
+    border-radius: 4px;
+  }
+  
+  .input-field:last-child {
+    margin-bottom: 16px; 
+  }
+  
+  .error-message {
+    color: #f56565; /* Red */
+    margin-bottom: 16px;
+  }
+  
+  .success-message {
+    color: #48bb78; /* Green */
+    margin-bottom: 16px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    background-color: darkorange; 
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #2b6cb0; /* Darker Blue */
+  }
+  

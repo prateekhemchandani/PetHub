@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./LoginPage.css";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,10 +20,8 @@ const LoginPage = () => {
     try {
       const response = await fetch("http://localhost:8000/api/v1/users/login", {
         method: "POST",
-        credentials: "include", // Allows cookies (tokens) to be stored
-        headers: {
-          "Content-Type": "application/json",
-        },
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
 
@@ -29,46 +30,47 @@ const LoginPage = () => {
       if (!response.ok) {
         throw new Error(data.message || "Login failed");
       }
-      setError("User logged in successfully!!!");
-      console.log("Login successful", data);
-      // Store tokens if needed
+
+      // Store login state
       localStorage.setItem("accessToken", data.accessToken);
       localStorage.setItem("refreshToken", data.refreshToken);
+      localStorage.setItem("isLoggedIn", "true");
+
+      // Notify other components (like Navbar)
+      window.dispatchEvent(new Event("storage"));
+
+      // Redirect to home page
+      navigate("/");
     } catch (err) {
       setError(err.message);
     }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <h2 className="text-2xl font-bold mb-4">Login</h2>
-        {error && <p className="text-red-500 mb-4">{error}</p>}
+    <div className="login-container">
+      <div className="login-box">
+        <h2>Login</h2>
+        {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block text-gray-700">Email</label>
+          <div className="input-group">
+            <label>Email</label>
             <input
               type="email"
-              className="w-full p-2 border rounded"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Password</label>
+          <div className="input-group">
+            <label>Password</label>
             <input
               type="password"
-              className="w-full p-2 border rounded"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-          >
-            Login
-          </button>
+          <button type="submit" className="login-button">Login</button>
         </form>
       </div>
     </div>

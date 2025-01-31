@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./RegisterPage.css"; // Import the CSS file
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -42,11 +43,11 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <h2 className="text-2xl font-bold mb-4">Register</h2>
-        {error && <p className="text-red-500 mb-4">{error}</p>}
-        {success && <p className="text-green-500 mb-4">{success}</p>}
+    <div className="register-container">
+      <div className="register-box">
+        <h2 className="register-title">Register</h2>
+        {error && <p className="error-message">{error}</p>}
+        {success && <p className="success-message">{success}</p>}
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -54,7 +55,7 @@ const RegisterPage = () => {
             placeholder="Full Name"
             value={formData.fullName}
             onChange={handleChange}
-            className="w-full p-2 mb-2 border rounded"
+            className="input-field"
           />
           <input
             type="text"
@@ -62,7 +63,7 @@ const RegisterPage = () => {
             placeholder="Username"
             value={formData.username}
             onChange={handleChange}
-            className="w-full p-2 mb-2 border rounded"
+            className="input-field"
           />
           <input
             type="email"
@@ -70,7 +71,7 @@ const RegisterPage = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-2 mb-2 border rounded"
+            className="input-field"
           />
           <input
             type="password"
@@ -78,12 +79,9 @@ const RegisterPage = () => {
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
-            className="w-full p-2 mb-4 border rounded"
+            className="input-field"
           />
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-          >
+          <button type="submit" className="submit-button">
             Register
           </button>
         </form>
