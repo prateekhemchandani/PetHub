@@ -11,6 +11,7 @@ import ShelterPage from "./Components/Shelters/ShelterPage";
 import LoginPage from "./Components/login/login";
 import RegisterPage from "./Components/Register/register";
 import PetManager from "./Components/Admin/admin";
+import AdminLoginPage from "./Components/adminLogin/adminLogin";
 
 const Layout = ({ children }) => (
   <>
@@ -43,9 +44,9 @@ const App = () => {
         <Route
           path="/admin"
           element={
-            <Layout>
-              <PetManager />
-            </Layout>
+            <PetManager />
+            // <Layout>
+            // </Layout>
           }
         />
         <Route
@@ -64,6 +65,7 @@ const App = () => {
             </Layout>
           }
         />
+        <Route path="/adminLogin" element={<AdminLoginPage />} />
         <Route
           path="/register"
           element={

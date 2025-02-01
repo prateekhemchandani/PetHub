@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./RegisterPage.css"; // Import the CSS file
-
+import { Link } from "react-router-dom";
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -85,6 +85,12 @@ const RegisterPage = () => {
             Register
           </button>
         </form>
+        <p>Already have an account?</p>
+        <Link to="/login">
+          <button type="button" className="submit-button">
+            Login
+          </button>
+        </Link>
       </div>
     </div>
   );

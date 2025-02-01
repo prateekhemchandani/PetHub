@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./LoginPage.css";
-import { Link } from "react-router-dom";
+import "./adminLogin.css";
 
-const LoginPage = () => {
-  const [email, setEmail] = useState("");
+const AdminLoginPage = () => {
+  const [adminEmail, setAdminEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -13,18 +12,21 @@ const LoginPage = () => {
     e.preventDefault();
     setError("");
 
-    if (!email || !password) {
+    if (!adminEmail || !password) {
       setError("Please enter both email and password.");
       return;
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/v1/users/login", {
-        method: "POST",
-        credentials: "include",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        "http://localhost:8000/api/v1/admin/loginAdmin",
+        {
+          method: "POST",
+          credentials: "include",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ adminEmail, password }),
+        }
+      );
 
       const data = await response.json();
 
@@ -41,7 +43,7 @@ const LoginPage = () => {
       window.dispatchEvent(new Event("storage"));
 
       // Redirect to home page
-      navigate("/");
+      navigate("/admin");
     } catch (err) {
       setError(err.message);
     }
@@ -57,8 +59,8 @@ const LoginPage = () => {
             <label>Email</label>
             <input
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={adminEmail}
+              onChange={(e) => setAdminEmail(e.target.value)}
               required
             />
           </div>
@@ -75,18 +77,9 @@ const LoginPage = () => {
             Login
           </button>
         </form>
-        <p>Don't have an account?</p>
-        <Link to="/register">
-          <button type="button" className="Navbar-button">
-            SignUp
-          </button>
-        </Link>
-        <Link to="/adminLogin">
-          <a>Are you an admin?</a>
-        </Link>
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default AdminLoginPage;
