@@ -75,14 +75,14 @@ const LoginPage = () => {
             Login
           </button>
         </form>
-        <p>Don't have an account?</p>
+        <p className="noAccount">Don't have an account?</p>
         <Link to="/register">
-          <button type="button" className="Navbar-button">
+          <button type="submit" className="login-button">
             SignUp
           </button>
         </Link>
         <Link to="/adminLogin">
-          <a>Are you an admin?</a>
+          <a className="adminLogin">Are you an admin?</a>
         </Link>
       </div>
     </div>

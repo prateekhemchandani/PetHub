@@ -15,7 +15,7 @@ const Footer = () => {
         <p>
           You can reach us at{" "}
           <a className="mail-links" href="#">
-            abc@gmail.com
+            pethub@gmail.com
           </a>
         </p>
         <p>
