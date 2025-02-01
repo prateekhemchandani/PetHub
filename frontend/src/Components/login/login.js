@@ -82,7 +82,7 @@ const LoginPage = () => {
           </button>
         </Link>
         <Link to="/adminLogin">
-          <a className="adminLogin">Are you an admin?</a>
+          <p className="admin">Are you an admin?</p>
         </Link>
       </div>
     </div>

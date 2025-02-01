@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 58vh;
+    min-height: 75vh;
     background-color: #ffffff;
   }
   
@@ -25,7 +25,7 @@
     width: 100%;
     padding: 8px;
     margin-bottom: 8px;
-    border: 1px solid #00000000;
+    border: 1px solid darkorange;
     border-radius: 4px;
   }
   
@@ -49,11 +49,17 @@
     color: white;
     padding: 8px;
     border-radius: 4px;
+    border: none;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.2s ease;
   }
   
   .submit-button:hover {
-    background-color: #2b6cb0; /* Darker Blue */
+    background-color: rgb(255, 94, 0); /* Darker Blue */
   }
   
+  .existing-user{
+    margin: 8px;
+    text-align: center;
+  }
